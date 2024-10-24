@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color: rgb(222, 241, 222);
+  color: #fd8989;
+}
+
+h1,
+p,
+button,
+input {
+  font-family: "Inter", sans-serif;
+}
+
+ion-icon {
+  --ionicon-stroke-width: 40px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 10px;
+  color: #0b0b0b;
+}
+
+.calculator {
+  max-width: 280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#display {
+  width: 100%;
+  padding: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: #9acbfb;
+  border: 0.5px solid #f80404;
+  border-radius: 10px;
+  color: #333333;
+  text-align: right;
+}
+
+#display input {
+  font-family: "Inter", sans-serif;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 12px 8px;
+  font-size: 21px;
+  background-color: #bfd1f5;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: #e2e2e2;
+  scale: 1.05;
+  transition: background-color 0.2s ease-out;
+}
+
+button:active {
+  scale: 0.9;
+  transition: all 0.2s ease-out;
+}
+
+.operator {
+  background-color: #fda5a5;
+  color: rgb(7, 6, 6);
+}
+
+.operator:hover {
+  background-color: #ea5e5e;
+}
+
+.operation {
+  background-color: #bbd8f4;
+  color: #0c0c0c;
+}
+
+.operation:hover {
+  background-color: #579af2;
+}
+
+.backspace {
+  grid-column: span 2;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #f07306;
+  color: rgb(14, 12, 12);
+}
+
+.equal:hover {
+  background-color: #ea5e5e;
+}
+
+.calculator-animation {
+  animation: slideIn 0.4s ease-in-out;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
